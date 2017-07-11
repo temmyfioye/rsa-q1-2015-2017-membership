@@ -23,8 +23,7 @@ sum_17 = np.sum(data_17, axis = 0)
 print(data_15.head(1), data_16.head(1), data_17.head(1))
 
 #sum the male columns and divide by 1,000,000, do same for the female columns. Division is by 1 million because this 
-
-is what will be represented on the bar chart
+#is what will be represented on the bar chart
 m_sum_15 = (sum_15['F_Male']+ sum_15['S_Male']+sum_15['P_Male'])/1000000
 f_sum_15 = (sum_15['F_Female']+ sum_15['S_Female']+sum_15['P_Female'])/1000000
 m_sum_16 = (sum_16['F_Male']+ sum_16['S_Male']+sum_16['P_Male'])/1000000
@@ -62,8 +61,7 @@ plt.xticks(x,gender)
 #2017 rsa data: m_sum_17, f_sum_17 (from above)
 rsa_q1_2017 = (m_sum_17, f_sum_17) #put them in a list
 tot_m = 36363042/1000000 #total male working population (in million) obtained from Nigerian Bureau of Statistics 
-
-(NBS) website
+#(NBS) website
 tot_f = 33107859/1000000 #total female working population
 working_pop= (tot_m, tot_f) #put in a list
 y_min = min(rsa_q1_2017) # this will be the minimum number on the y_axis
