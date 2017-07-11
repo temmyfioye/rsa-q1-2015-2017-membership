@@ -9,7 +9,7 @@ file_2015 = 'Q1_2015.csv' #year 2015
 file_2016 = 'Q1_2016.csv' #year 2016
 file_2017 = 'Q1_2017.csv' #year 2017
 
-data_15 = pd.read_csv(file_201) #read the files using pandas
+#read the files using pandas
 data_15 = pd.read_csv(file_2015)
 data_16 = pd.read_csv(file_2016)
 data_17 = pd.read_csv(file_2017)
@@ -41,10 +41,8 @@ fig, ax = plt.subplots()
 index=np.arange(n_groups)
 bar_width = 0.35
 opacity = 0.8
-rects1 = plt.bar(index, males, bar_width, alpha = opacity, color='b', label='Mal
-es')
-rects2 = plt.bar(index+bar_width, females, bar_width, alpha = opacity, color='r'
-, label='Female Membership')
+rects1 = plt.bar(index, males, bar_width, alpha = opacity, color='b', label='Males')
+rects2 = plt.bar(index+bar_width, females, bar_width, alpha = opacity, color='r', label='Female Membership')
 plt.xlabel('Years')
 plt.ylabel('RSA Membership (in \'000000\')')
 plt.title('RSA Membership for Q1 2015, 2016 & 2017')
