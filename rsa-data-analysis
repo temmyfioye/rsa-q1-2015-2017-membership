@@ -76,14 +76,14 @@ plt.show()
 #for the third stage i.e. plotting to know the age group for Q1 2017 with the highest RSA account
 data_17_r = pd.read_csv(file_2017, index_col=0) #parse the data again, this time with the index column
 sum_age =np.sum(data_17_r, axis=1) #sum row wise i.e by age brackets
-age_brakcets = ['Below 30', '30-39', '40-49', '50-59', '60-65', 'Above 65']
-x = np.arange(len(age_brakcets))
+age_groups = ['Below 30', '30-39', '40-49', '50-59', '60-65', 'Above 65']
+x = np.arange(len(age_groups))
 y = list(sum_age)
 sum_age = np.sum(data_17_r, axis=1)
 sum_age = sum_age/100000 #this time dividing by 100000
 len(sum_age) == len(age_brakcets) #just to check that the data in the sum is equal to the defined age groups
 x = np.arange(len(sum_age))
-plt.xticks(x, age_brackets)
+plt.xticks(x, age_groups)
 y_min = min(sum_age) - 1
 y_max = max(sum_age) + 1
 plt.ylim((y_min, y_max))
